@@ -7,13 +7,48 @@ import {
 import StarterKit from '@tiptap/starter-kit';
 import Highlight from '@tiptap/extension-highlight';
 import Typography from '@tiptap/extension-typography';
+import Table from '@tiptap/extension-table';
+import TableRow from '@tiptap/extension-table-row';
+import TableCell from '@tiptap/extension-table-cell';
+import TableHeader from '@tiptap/extension-table-header';
 import './styles.scss';
 
 import { MenuBar } from './Mebubar';
 
+const CustomTableCell = TableCell.extend({
+  addAttributes() {
+    return {
+      // extend the existing attributes …
+      ...this.parent?.(),
+
+      // and add a new one …
+      backgroundColor: {
+        default: null,
+        parseHTML: (element) => element.getAttribute('data-background-color'),
+        renderHTML: (attributes) => {
+          return {
+            'data-background-color': attributes.backgroundColor,
+            style: `background-color: ${attributes.backgroundColor}`,
+          };
+        },
+      },
+    };
+  },
+});
+
 export const Tiptap = () => {
   const editor = useEditor({
-    extensions: [StarterKit, Highlight, Typography],
+    extensions: [
+      StarterKit,
+      Highlight,
+      Typography,
+      Table.configure({
+        resizable: true,
+      }),
+      TableRow,
+      TableHeader,
+      CustomTableCell,
+    ],
     content: '<p>Hello World!</p>',
   });
 
