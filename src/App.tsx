@@ -1,24 +1,34 @@
-import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import { Tiptap } from './TipTap';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="demo-layout">
+      <nav className="demo-nav">
+        <div className="demo-nav-header">
+          <span className="material-icons">test</span>
+        </div>
+      </nav>
+      <div className="demo-sidebar">
+        <div className="demo-sidebar-header">
+          <div>DEMO</div>
+          <div>demo</div>
+        </div>
+        <div className="demo-sidebar-content">
+          <p>demo</p>
+        </div>
+      </div>
+      <div className="demo-main">
+        <header className="demo-main-header">
+          <div>CONTENTS</div>
+          <div>contents</div>
+        </header>
+        <section className="demo-main-contents">
+          <div className="demo-main-content">
+            <Tiptap />
+          </div>
+        </section>
+      </div>
     </div>
   );
 }
