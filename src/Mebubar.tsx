@@ -28,6 +28,14 @@ export const MenuBar = ({ editor }: any) => {
     return null;
   }
 
+  const addImage = () => {
+    const url = window.prompt('URL');
+
+    if (url) {
+      editor.chain().focus().setImage({ src: url }).run();
+    }
+  };
+
   return (
     <>
       <button
@@ -268,6 +276,7 @@ export const MenuBar = ({ editor }: any) => {
       >
         goToPreviousCell
       </button>
+      <button onClick={addImage}>add image from URL</button>
     </>
   );
 };
