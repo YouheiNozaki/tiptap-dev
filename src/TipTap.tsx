@@ -13,6 +13,8 @@ import TableCell from '@tiptap/extension-table-cell';
 import TableHeader from '@tiptap/extension-table-header';
 import Image from '@tiptap/extension-image';
 import TextAlign from '@tiptap/extension-text-align';
+import Document from '@tiptap/extension-document';
+import Placeholder from '@tiptap/extension-placeholder';
 import './styles.scss';
 
 import { MenuBar } from './Mebubar';
@@ -38,10 +40,14 @@ const CustomTableCell = TableCell.extend({
   },
 });
 
+const CustomDocument = Document.extend({
+  content: 'heading block*',
+});
+
 export const Tiptap = () => {
   const editor = useEditor({
     extensions: [
-      StarterKit,
+      // StarterKit,
       Highlight,
       Typography,
       Table.configure({
@@ -55,6 +61,19 @@ export const Tiptap = () => {
         types: ['heading', 'paragraph'],
       }),
       Highlight,
+      CustomDocument,
+      StarterKit.configure({
+        document: false,
+      }),
+      Placeholder.configure({
+        placeholder: ({ node }) => {
+          if (node.type.name === 'heading') {
+            return 'What’s the title?';
+          }
+
+          return 'Can you add some further context?';
+        },
+      }),
     ],
     content: '<p>Hello World!</p>',
   });
