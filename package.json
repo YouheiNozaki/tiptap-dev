@@ -6,6 +6,8 @@
     "@testing-library/jest-dom": "^5.16.1",
     "@testing-library/react": "^12.1.2",
     "@testing-library/user-event": "^13.5.0",
+    "@tiptap/extension-highlight": "^2.0.0-beta.32",
+    "@tiptap/extension-typography": "^2.0.0-beta.19",
     "@tiptap/react": "^2.0.0-beta.105",
     "@tiptap/starter-kit": "^2.0.0-beta.171",
     "@types/jest": "^27.4.0",
