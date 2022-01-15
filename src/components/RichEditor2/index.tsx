@@ -15,6 +15,8 @@ import Image from '@tiptap/extension-image';
 import TextAlign from '@tiptap/extension-text-align';
 import Document from '@tiptap/extension-document';
 import Placeholder from '@tiptap/extension-placeholder';
+
+import { Container } from './Container';
 import { MenuBar } from './MenuBar';
 import './index.scss';
 
@@ -145,10 +147,10 @@ export const RichEditor2 = () => {
           </button>
         </FloatingMenu>
       )} */}
-      <div>
+      <Container>
         <MenuBar editor={editor} />
         <EditorContent editor={editor} />
-      </div>
+      </Container>
     </div>
   );
 };
