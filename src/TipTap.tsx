@@ -3,6 +3,7 @@ import {
   EditorContent,
   BubbleMenu,
   FloatingMenu,
+  ReactNodeViewRenderer,
 } from '@tiptap/react';
 import StarterKit from '@tiptap/starter-kit';
 import Highlight from '@tiptap/extension-highlight';
@@ -15,9 +16,14 @@ import Image from '@tiptap/extension-image';
 import TextAlign from '@tiptap/extension-text-align';
 import Document from '@tiptap/extension-document';
 import Placeholder from '@tiptap/extension-placeholder';
-import './styles.scss';
+import CodeBlockLowlight from '@tiptap/extension-code-block-lowlight';
 
+// load all highlight.js languages
+// import lowlight from 'lowlight';
+
+import { CodeBlock } from './CodeBlock';
 import { MenuBar } from './Mebubar';
+import './styles.scss';
 
 const CustomTableCell = TableCell.extend({
   addAttributes() {
@@ -74,6 +80,11 @@ export const Tiptap = () => {
           return 'Can you add some further context?';
         },
       }),
+      // CodeBlockLowlight.extend({
+      //   addNodeView() {
+      //     return ReactNodeViewRenderer(CodeBlock);
+      //   },
+      // }).configure({ lowlight }),
     ],
     content: '<p>Hello World!</p>',
   });

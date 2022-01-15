@@ -62,6 +62,12 @@ export const MenuBar = ({ editor }: any) => {
       >
         code
       </button>
+      <button
+        onClick={() => editor.chain().focus().toggleCodeBlock().run()}
+        className={editor.isActive('codeBlock') ? 'is-active' : ''}
+      >
+        code block
+      </button>
       <button onClick={() => editor.chain().focus().unsetAllMarks().run()}>
         clear marks
       </button>
