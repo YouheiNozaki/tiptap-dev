@@ -1,7 +1,5 @@
 /* Basic editor styles */
 .ProseMirror {
-  margin: 40px;
-  border: 1px solid #b39b9b;
   > * + * {
     margin-top: 0.75em;
   }

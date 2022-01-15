@@ -28,17 +28,17 @@ export const MenuBar = ({ editor }: any) => {
     return null;
   }
 
-  const addImage = () => {
-    const url = window.prompt('URL');
+  // const addImage = () => {
+  //   const url = window.prompt('URL');
 
-    if (url) {
-      editor.chain().focus().setImage({ src: url }).run();
-    }
-  };
+  //   if (url) {
+  //     editor.chain().focus().setImage({ src: url }).run();
+  //   }
+  // };
 
   return (
     <>
-      <button
+      {/* <button
         onClick={() => editor.chain().focus().toggleBold().run()}
         className={editor.isActive('bold') ? 'is-active' : ''}
       >
@@ -73,13 +73,13 @@ export const MenuBar = ({ editor }: any) => {
       </button>
       <button onClick={() => editor.chain().focus().clearNodes().run()}>
         clear nodes
-      </button>
-      <button
+      </button> */}
+      {/* <button
         onClick={() => editor.chain().focus().setParagraph().run()}
         className={editor.isActive('paragraph') ? 'is-active' : ''}
       >
         paragraph
-      </button>
+      </button> */}
       <button
         onClick={() => editor.chain().focus().toggleHeading({ level: 1 }).run()}
         className={editor.isActive('heading', { level: 1 }) ? 'is-active' : ''}
@@ -116,7 +116,7 @@ export const MenuBar = ({ editor }: any) => {
       >
         h6
       </button>
-      <button
+      {/* <button
         onClick={() => editor.chain().focus().toggleBulletList().run()}
         className={editor.isActive('bulletList') ? 'is-active' : ''}
       >
@@ -312,7 +312,7 @@ export const MenuBar = ({ editor }: any) => {
       >
         goToPreviousCell
       </button>
-      <button onClick={addImage}>add image from URL</button>
+      <button onClick={addImage}>add image from URL</button> */}
     </>
   );
 };

@@ -1,12 +1,12 @@
 import './App.css';
-import { Tiptap } from './TipTap';
+import { RichEditor2 } from './components/RichEditor2';
 
 function App() {
   return (
     <div className="demo-layout">
       <nav className="demo-nav">
         <div className="demo-nav-header">
-          <span className="material-icons">test</span>
+          <span className="material-icons"></span>
         </div>
       </nav>
       <div className="demo-sidebar">
@@ -25,7 +25,7 @@ function App() {
         </header>
         <section className="demo-main-contents">
           <div className="demo-main-content">
-            <Tiptap />
+            <RichEditor2 />
           </div>
         </section>
       </div>

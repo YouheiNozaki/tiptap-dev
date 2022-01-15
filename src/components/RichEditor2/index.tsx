@@ -1,9 +1,8 @@
 import {
   useEditor,
   EditorContent,
-  BubbleMenu,
-  FloatingMenu,
-  ReactNodeViewRenderer,
+  // BubbleMenu,
+  // FloatingMenu,
 } from '@tiptap/react';
 import StarterKit from '@tiptap/starter-kit';
 import Highlight from '@tiptap/extension-highlight';
@@ -16,14 +15,8 @@ import Image from '@tiptap/extension-image';
 import TextAlign from '@tiptap/extension-text-align';
 import Document from '@tiptap/extension-document';
 import Placeholder from '@tiptap/extension-placeholder';
-import CodeBlockLowlight from '@tiptap/extension-code-block-lowlight';
-
-// load all highlight.js languages
-// import lowlight from 'lowlight';
-
-import { CodeBlock } from './CodeBlock';
-import { MenuBar } from './Mebubar';
-import './styles.scss';
+import { MenuBar } from './MenuBar';
+import './index.scss';
 
 const CustomTableCell = TableCell.extend({
   addAttributes() {
@@ -50,7 +43,7 @@ const CustomDocument = Document.extend({
   content: 'heading block*',
 });
 
-export const Tiptap = () => {
+export const RichEditor2 = () => {
   const editor = useEditor({
     extensions: [
       // StarterKit,
@@ -91,7 +84,7 @@ export const Tiptap = () => {
 
   return (
     <div>
-      {editor && (
+      {/* {editor && (
         <BubbleMenu
           className="bubble-menu"
           tippyOptions={{ duration: 100 }}
@@ -151,9 +144,11 @@ export const Tiptap = () => {
             Bullet List
           </button>
         </FloatingMenu>
-      )}
-      <MenuBar editor={editor} />
-      <EditorContent editor={editor} />
+      )} */}
+      <div>
+        <MenuBar editor={editor} />
+        <EditorContent editor={editor} />
+      </div>
     </div>
   );
 };
