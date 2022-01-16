@@ -8,12 +8,7 @@ type Props = {
   onClose?: () => React.MouseEventHandler;
 };
 
-export const Tooltip: React.VFC<Props> = ({
-  children,
-  trigger,
-  className,
-  onClose = () => {},
-}) => {
+export const Tooltip: React.VFC<Props> = ({ children, trigger }) => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
   const open = useCallback(
     (e: React.MouseEvent<HTMLElement>) => {
@@ -23,14 +18,10 @@ export const Tooltip: React.VFC<Props> = ({
     [setIsOpen],
   );
 
-  const close = useCallback(
-    (e: React.MouseEvent<HTMLElement>) => {
-      e.stopPropagation();
-      setIsOpen(false);
-      onClose();
-    },
-    [onClose],
-  );
+  const close = useCallback((e: React.MouseEvent<HTMLElement>) => {
+    e.stopPropagation();
+    setIsOpen(false);
+  }, []);
 
   return (
     <div className={styles.trigger} onClick={open}>

@@ -1,4 +1,3 @@
-import { useState } from 'react';
 import { Tooltip } from '../../Tooltip';
 import type { Editor } from '@tiptap/react';
 
