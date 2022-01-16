@@ -6,6 +6,7 @@ import { Tooltip } from '../../Parts/Tooltip';
 
 import type { Editor } from '@tiptap/react';
 import styles from './formatting.module.scss';
+import { ColorPicker } from '../../Parts/ColorPicker';
 
 type Props = {
   editor: Editor;
@@ -41,6 +42,17 @@ export const Formatting: React.VFC<Props> = ({ editor }) => {
         onClick={() => editor.chain().focus().toggleCode().run()}
         isActive={editor.isActive('code')}
       />
+      <Tooltip
+        trigger={
+          <Button
+            icon={
+              <span className="material-icons-outlined">format_color_text</span>
+            }
+          />
+        }
+      >
+        <ColorPicker editor={editor} />
+      </Tooltip>
       <Tooltip
         trigger={
           textAlighCenter ? (

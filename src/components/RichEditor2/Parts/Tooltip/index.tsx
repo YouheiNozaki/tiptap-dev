@@ -29,9 +29,7 @@ export const Tooltip: React.VFC<Props> = ({ children, trigger }) => {
       {isOpen && (
         <div>
           <div className={styles.mask} onClick={close} />
-          <div className={styles.container} onClick={close}>
-            {children}
-          </div>
+          <div className={styles.container}>{children}</div>
         </div>
       )}
     </div>
