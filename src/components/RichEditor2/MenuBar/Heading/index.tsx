@@ -1,17 +1,16 @@
 import { useState } from 'react';
-import { Editor } from '@tiptap/react';
+import { Tooltip } from '../../Tooltip';
+import type { Editor } from '@tiptap/react';
 
 type Props = {
   editor: Editor;
 };
 
 export const Heading: React.VFC<Props> = ({ editor }) => {
-  const [open, setOpen] = useState<boolean>(false);
   return (
     <>
-      <button onClick={() => setOpen(true)}>見出し</button>
-      {open && (
-        <>
+      <Tooltip trigger={<button>見出し</button>}>
+        <ul>
           <button
             onClick={() =>
               editor.chain().focus().toggleHeading({ level: 1 }).run()
@@ -62,18 +61,8 @@ export const Heading: React.VFC<Props> = ({ editor }) => {
           >
             h5
           </button>
-          <button
-            onClick={() =>
-              editor.chain().focus().toggleHeading({ level: 6 }).run()
-            }
-            className={
-              editor.isActive('heading', { level: 6 }) ? 'is-active' : ''
-            }
-          >
-            h6
-          </button>
-        </>
-      )}
+        </ul>
+      </Tooltip>
     </>
   );
 };

@@ -1,0 +1,22 @@
+.mask {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 100;
+}
+
+.trigger {
+  position: relative;
+}
+
+.container {
+  position: absolute;
+  background-color: #fff;
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.1);
+  border: 1px solid #e7e7e7;
+  z-index: 101;
+  border-radius: 3px;
+  padding: 4px;
+}
