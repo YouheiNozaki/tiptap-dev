@@ -12,11 +12,7 @@
   &:hover {
     cursor: pointer;
 
-    p {
-      color: red;
-    }
-
-    span {
+    * {
       color: red;
     }
   }
