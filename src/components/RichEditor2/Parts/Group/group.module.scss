@@ -1,0 +1,17 @@
+.container {
+  display: flex;
+  align-items: center;
+
+  > * {
+    margin-right: 4px;
+  }
+
+  &::after {
+    content: '';
+    display: inline-block;
+    width: 1px;
+    height: 16px;
+    margin: 4px 12px;
+    background-color: #999;
+  }
+}

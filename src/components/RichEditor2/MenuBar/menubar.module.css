@@ -1,4 +1,6 @@
 .container {
+  display: flex;
+  align-items: center;
   padding: 8px;
   background-color: #e7e7f3;
   border: 1px solid #e7e7e7;

@@ -16,6 +16,12 @@
       color: red;
     }
   }
+
+  &.isActive {
+    span {
+      color: red;
+    }
+  }
 }
 
 .text {

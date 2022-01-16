@@ -1,7 +1,8 @@
 import cx from 'classnames';
 
+import { Group } from '../../Parts/Group';
 import { Tooltip } from '../../Parts/Tooltip';
-import { TextButton } from '../../Parts/TextButton';
+import { Button } from '../../Parts/Button';
 
 import styles from './heading.module.scss';
 import type { Editor } from '@tiptap/react';
@@ -18,10 +19,10 @@ export const Heading: React.VFC<Props> = ({ editor }) => {
   const isHeading5 = editor.isActive('heading', { level: 5 });
 
   return (
-    <div className={styles.container}>
+    <Group>
       <Tooltip
         trigger={
-          <TextButton
+          <Button
             text={
               isHeading1
                 ? '見出し1'
@@ -108,6 +109,6 @@ export const Heading: React.VFC<Props> = ({ editor }) => {
           </li>
         </ul>
       </Tooltip>
-    </div>
+    </Group>
   );
 };
