@@ -1,4 +1,4 @@
-import styles from './textbutton.module.css';
+import styles from './textbutton.module.scss';
 type Props = {
   text: string;
   icon?: React.ReactChild;

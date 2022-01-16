@@ -1,7 +1,6 @@
 import { Tooltip } from '../../Parts/Tooltip';
 import type { Editor } from '@tiptap/react';
 import { TextButton } from '../../Parts/TextButton';
-import { BsArrowsExpand } from 'react-icons/bs';
 
 type Props = {
   editor: Editor;
@@ -14,7 +13,7 @@ export const Heading: React.VFC<Props> = ({ editor }) => {
         trigger={
           <TextButton
             text="段落"
-            icon={<BsArrowsExpand color="#331cbf" size={16} />}
+            icon={<span className="material-icons-outlined">unfold_more</span>}
           />
         }
       >
