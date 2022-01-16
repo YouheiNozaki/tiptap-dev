@@ -18,7 +18,7 @@ export const Heading: React.VFC<Props> = ({ editor }) => {
   const isHeading5 = editor.isActive('heading', { level: 5 });
 
   return (
-    <>
+    <div className={styles.container}>
       <Tooltip
         trigger={
           <TextButton
@@ -108,6 +108,6 @@ export const Heading: React.VFC<Props> = ({ editor }) => {
           </li>
         </ul>
       </Tooltip>
-    </>
+    </div>
   );
 };

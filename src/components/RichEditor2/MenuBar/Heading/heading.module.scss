@@ -1,3 +1,17 @@
+.container {
+  display: flex;
+  align-items: center;
+
+  &::after {
+    content: '';
+    display: inline-block;
+    width: 1px;
+    height: 16px;
+    margin: 4px 12px;
+    background-color: #999;
+  }
+}
+
 .list {
   display: flex;
   flex-direction: column;
@@ -10,6 +24,7 @@
 .li {
   list-style: none;
   color: #331cbf;
+  white-space: nowrap;
 
   &.h1 {
     font-size: 24px;
