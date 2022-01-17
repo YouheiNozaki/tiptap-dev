@@ -1,4 +1,4 @@
-import { useEditor, EditorContent } from '@tiptap/react';
+import { useEditor, EditorContent, ReactNodeViewRenderer } from '@tiptap/react';
 import StarterKit from '@tiptap/starter-kit';
 import Document from '@tiptap/extension-document';
 import Paragraph from '@tiptap/extension-paragraph';
@@ -7,9 +7,12 @@ import TextStyle from '@tiptap/extension-text-style';
 import { Color } from '@tiptap/extension-color';
 import TextAlign from '@tiptap/extension-text-align';
 import Highlight from '@tiptap/extension-highlight';
+import CodeBlockLowlight from '@tiptap/extension-code-block-lowlight';
+import lowlight from 'lowlight';
 
 import { Container } from './Container';
 import { MenuBar } from './MenuBar';
+import { CodeBlock } from './Parts/CodeBlock';
 import './index.scss';
 
 export const RichEditor2 = () => {
@@ -27,6 +30,11 @@ export const RichEditor2 = () => {
       TextAlign.configure({
         types: ['heading', 'paragraph'],
       }),
+      CodeBlockLowlight.extend({
+        addNodeView() {
+          return ReactNodeViewRenderer(CodeBlock);
+        },
+      }).configure({ lowlight }),
     ],
   });
 

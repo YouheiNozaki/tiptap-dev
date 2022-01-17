@@ -14,7 +14,11 @@ export const Block: React.VFC<Props> = ({ editor }) => {
         onClick={() => editor.chain().focus().toggleBlockquote().run()}
         isActive={editor.isActive('blockquote')}
       />
-      <Button icon={<span className="material-icons-outlined">code</span>} />
+      <Button
+        icon={<span className="material-icons-outlined">code</span>}
+        onClick={() => editor.chain().focus().toggleCodeBlock().run()}
+        isActive={editor.isActive('codeBlock')}
+      />
     </Group>
   );
 };
