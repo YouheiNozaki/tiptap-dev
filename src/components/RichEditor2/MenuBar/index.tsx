@@ -1,6 +1,7 @@
 import type { Editor } from '@tiptap/react';
 import { Heading } from './Heading';
 import { Formatting } from './Formatting';
+import { Block } from './Block';
 import styles from './menubar.module.css';
 
 type Props = {
@@ -16,6 +17,7 @@ export const MenuBar: React.VFC<Props> = ({ editor }) => {
     <div className={styles.container}>
       <Heading editor={editor} />
       <Formatting editor={editor} />
+      <Block editor={editor} />
     </div>
   );
 };

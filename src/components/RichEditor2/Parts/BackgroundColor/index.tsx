@@ -7,7 +7,10 @@ type Props = {
 };
 
 export const BackgroundColor: React.VFC<Props> = ({ editor }) => {
-  const [color, setColor] = useState<string>('#1c1a1a');
+  const selectColor: string = editor.getAttributes('textStyle').color;
+  const [color, setColor] = useState<string>(
+    selectColor ? selectColor : '#1c1a1a',
+  );
 
   const onPickColor = useCallback(
     (newColor: string) => {
