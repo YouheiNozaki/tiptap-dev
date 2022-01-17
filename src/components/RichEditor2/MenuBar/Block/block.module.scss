@@ -1,0 +1,26 @@
+.list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  li {
+    padding: 2px;
+  }
+}
+
+.li {
+  list-style: none;
+}
+
+.button {
+  border: none;
+  background-color: #fff;
+
+  &:hover {
+    cursor: pointer;
+    background-color: #e7e7f3;
+  }
+
+  span {
+    font-size: 14px;
+    color: #331cbf;
+  }
+}

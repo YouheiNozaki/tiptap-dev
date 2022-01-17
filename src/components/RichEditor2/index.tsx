@@ -9,6 +9,10 @@ import TextAlign from '@tiptap/extension-text-align';
 import Highlight from '@tiptap/extension-highlight';
 import CodeBlockLowlight from '@tiptap/extension-code-block-lowlight';
 import lowlight from 'lowlight';
+import Table from '@tiptap/extension-table';
+import TableRow from '@tiptap/extension-table-row';
+import TableCell from '@tiptap/extension-table-cell';
+import TableHeader from '@tiptap/extension-table-header';
 
 import { Container } from './Container';
 import { MenuBar } from './MenuBar';
@@ -35,6 +39,12 @@ export const RichEditor2 = () => {
           return ReactNodeViewRenderer(CodeBlock);
         },
       }).configure({ lowlight }),
+      Table.configure({
+        resizable: true,
+      }),
+      TableRow,
+      TableHeader,
+      TableCell,
     ],
   });
 
