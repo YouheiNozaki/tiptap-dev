@@ -6,16 +6,13 @@ type Props = {
   editor: Editor;
 };
 
-export const ColorPicker: React.VFC<Props> = ({ editor }) => {
-  const selectColor: string = editor.getAttributes('textStyle').color;
-  const [color, setColor] = useState<string>(
-    selectColor ? selectColor : '#1c1a1a',
-  );
+export const BackgroundColor: React.VFC<Props> = ({ editor }) => {
+  const [color, setColor] = useState<string>('#1c1a1a');
 
   const onPickColor = useCallback(
     (newColor: string) => {
       setColor(newColor);
-      editor.chain().setColor(newColor).run();
+      editor.chain().setHighlight({ color: newColor }).run();
     },
     [editor],
   );

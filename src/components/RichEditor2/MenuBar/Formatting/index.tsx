@@ -7,6 +7,7 @@ import { Tooltip } from '../../Parts/Tooltip';
 import type { Editor } from '@tiptap/react';
 import styles from './formatting.module.scss';
 import { ColorPicker } from '../../Parts/ColorPicker';
+import { BackgroundColor } from '../../Parts/BackgroundColor';
 
 type Props = {
   editor: Editor;
@@ -52,6 +53,17 @@ export const Formatting: React.VFC<Props> = ({ editor }) => {
         }
       >
         <ColorPicker editor={editor} />
+      </Tooltip>
+      <Tooltip
+        trigger={
+          <Button
+            icon={
+              <span className="material-icons-outlined">format_color_fill</span>
+            }
+          />
+        }
+      >
+        <BackgroundColor editor={editor} />
       </Tooltip>
       <Tooltip
         trigger={

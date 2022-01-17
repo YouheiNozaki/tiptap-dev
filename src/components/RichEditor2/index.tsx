@@ -6,6 +6,7 @@ import Text from '@tiptap/extension-text';
 import TextStyle from '@tiptap/extension-text-style';
 import { Color } from '@tiptap/extension-color';
 import TextAlign from '@tiptap/extension-text-align';
+import Highlight from '@tiptap/extension-highlight';
 
 import { Container } from './Container';
 import { MenuBar } from './MenuBar';
@@ -19,7 +20,10 @@ export const RichEditor2 = () => {
       Paragraph,
       Text,
       TextStyle,
-      Color,
+      Color.configure({
+        types: ['textStyle'],
+      }),
+      Highlight.configure({ multicolor: true }),
       TextAlign.configure({
         types: ['heading', 'paragraph'],
       }),
@@ -31,9 +35,23 @@ export const RichEditor2 = () => {
   }
 
   return (
-    <Container>
-      <MenuBar editor={editor} />
-      <EditorContent editor={editor} />
-    </Container>
+    <>
+      <Container>
+        <MenuBar editor={editor} />
+        <EditorContent editor={editor} />
+      </Container>
+      {
+        <pre>
+          <code>{editor.getHTML()}</code>
+        </pre>
+      }
+      <div>
+        <ul>
+          <li>
+            ColorとbackgroundColorを同時に設定できない(Markの詳細度が高いため)
+          </li>
+        </ul>
+      </div>
+    </>
   );
 };
