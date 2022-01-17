@@ -1,5 +1,5 @@
 import { useState, useCallback } from 'react';
-import { HexColorPicker, HexColorInput } from 'react-colorful';
+import { HexColorPicker } from 'react-colorful';
 import type { Editor } from '@tiptap/react';
 
 type Props = {
@@ -24,9 +24,9 @@ export const ColorPicker: React.VFC<Props> = ({ editor }) => {
         color={selectColor ? selectColor : color}
         onChange={(newColor) => onPickColor(newColor)}
       />
-      <HexColorInput
-        color={selectColor ? selectColor : color}
-        onChange={(newColor) => onPickColor(newColor)}
+      <input
+        value={selectColor ? selectColor : color}
+        onChange={(e) => onPickColor(e.target.value)}
       />
     </div>
   );
