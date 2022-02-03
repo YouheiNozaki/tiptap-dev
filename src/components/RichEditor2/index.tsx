@@ -18,6 +18,7 @@ import { Container } from './Container';
 import { MenuBar } from './MenuBar';
 import { CodeBlock } from './Parts/CodeBlock';
 import './index.scss';
+import { Preview } from './Preview';
 
 export const RichEditor2 = () => {
   const editor = useEditor({
@@ -58,11 +59,11 @@ export const RichEditor2 = () => {
         <MenuBar editor={editor} />
         <EditorContent editor={editor} />
       </Container>
-      {
-        <pre>
-          <code>{editor.getHTML()}</code>
-        </pre>
-      }
+
+      <Container>
+        <Preview editor={editor} />
+      </Container>
+
       <div>
         <ul>
           <li>
