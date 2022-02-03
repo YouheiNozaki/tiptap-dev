@@ -19,6 +19,7 @@ import { MenuBar } from './MenuBar';
 import { CodeBlock } from './Parts/CodeBlock';
 import './index.scss';
 import { Preview } from './Preview';
+import { Todo } from './MenuBar/Todo';
 
 export const RichEditor2 = () => {
   const editor = useEditor({
@@ -64,13 +65,7 @@ export const RichEditor2 = () => {
         <Preview editor={editor} />
       </Container>
 
-      <div>
-        <ul>
-          <li>
-            ColorとbackgroundColorを同時に設定できない(Markの詳細度が高いため)
-          </li>
-        </ul>
-      </div>
+      <Todo />
     </>
   );
 };
