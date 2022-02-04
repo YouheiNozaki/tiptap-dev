@@ -13,6 +13,8 @@ import Table from '@tiptap/extension-table';
 import TableRow from '@tiptap/extension-table-row';
 import TableCell from '@tiptap/extension-table-cell';
 import TableHeader from '@tiptap/extension-table-header';
+import Subscript from '@tiptap/extension-subscript';
+import Superscript from '@tiptap/extension-superscript';
 
 import { Container } from './Container';
 import { MenuBar } from './MenuBar';
@@ -47,6 +49,8 @@ export const RichEditor2 = () => {
       TableRow,
       TableHeader,
       TableCell,
+      Subscript,
+      Superscript,
     ],
   });
 

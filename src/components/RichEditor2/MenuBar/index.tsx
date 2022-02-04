@@ -3,6 +3,7 @@ import { Heading } from './Heading';
 import { Formatting } from './Formatting';
 import { Block } from './Block';
 import { List } from './List';
+import { Sub } from './Sub';
 import styles from './menubar.module.css';
 
 type Props = {
@@ -20,6 +21,7 @@ export const MenuBar: React.VFC<Props> = ({ editor }) => {
       <Formatting editor={editor} />
       <Block editor={editor} />
       <List editor={editor} />
+      <Sub editor={editor} />
     </div>
   );
 };

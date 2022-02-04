@@ -187,4 +187,14 @@
     cursor: ew-resize;
     cursor: col-resize;
   }
+
+  sub {
+    vertical-align: sub;
+    font-size: 12px;
+  }
+
+  sup {
+    vertical-align: super;
+    font-size: 12px;
+  }
 }
