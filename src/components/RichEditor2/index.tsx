@@ -20,6 +20,7 @@ import { Container } from './Container';
 import { MenuBar } from './MenuBar';
 import { CodeBlock } from './ui/CodeBlock';
 import './index.scss';
+import styles from './index.module.scss';
 import { Preview } from './Preview';
 
 export const RichEditor2 = () => {
@@ -61,7 +62,7 @@ export const RichEditor2 = () => {
     <>
       <Container>
         <MenuBar editor={editor} />
-        <EditorContent editor={editor} />
+        <EditorContent editor={editor} className={styles.main} />
       </Container>
 
       {/* TODO：削除 */}
