@@ -21,7 +21,6 @@ import { MenuBar } from './MenuBar';
 import { CodeBlock } from './Parts/CodeBlock';
 import './index.scss';
 import { Preview } from './Preview';
-import { Todo } from './Todo';
 
 export const RichEditor2 = () => {
   const editor = useEditor({
@@ -65,11 +64,10 @@ export const RichEditor2 = () => {
         <EditorContent editor={editor} />
       </Container>
 
+      {/* TODO：削除 */}
       <Container>
         <Preview editor={editor} />
       </Container>
-
-      <Todo />
     </>
   );
 };
