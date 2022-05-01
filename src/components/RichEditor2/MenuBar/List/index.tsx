@@ -1,6 +1,6 @@
-import { Group } from '../../Parts/Group';
+import { Group } from '../../ui/Group';
 import type { Editor } from '@tiptap/react';
-import { Button } from '../../Parts/Button';
+import { Button } from '../../ui/Button';
 
 type Props = {
   editor: Editor;

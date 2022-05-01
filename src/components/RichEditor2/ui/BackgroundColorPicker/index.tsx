@@ -6,7 +6,7 @@ type Props = {
   editor: Editor;
 };
 
-export const BackgroundColor: React.VFC<Props> = ({ editor }) => {
+export const BackgroundColorPicker: React.VFC<Props> = ({ editor }) => {
   const selectColor: string = editor.getAttributes('textStyle').color;
   const [color, setColor] = useState<string>(
     selectColor ? selectColor : '#1c1a1a',

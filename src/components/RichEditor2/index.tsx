@@ -18,7 +18,7 @@ import Superscript from '@tiptap/extension-superscript';
 
 import { Container } from './Container';
 import { MenuBar } from './MenuBar';
-import { CodeBlock } from './Parts/CodeBlock';
+import { CodeBlock } from './ui/CodeBlock';
 import './index.scss';
 import { Preview } from './Preview';
 

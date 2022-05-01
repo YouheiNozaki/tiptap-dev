@@ -1,7 +1,7 @@
-import { Group } from '../../Parts/Group';
+import { Group } from '../../ui/Group';
 import type { Editor } from '@tiptap/react';
-import { Button } from '../../Parts/Button';
-import { Tooltip } from '../../Parts/Tooltip';
+import { Button } from '../../ui/Button';
+import { Tooltip } from '../../ui/Tooltip';
 
 import styles from './block.module.scss';
 

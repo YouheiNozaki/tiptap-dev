@@ -1,13 +1,13 @@
 import cx from 'classnames';
 
-import { Button } from '../../Parts/Button';
-import { Group } from '../../Parts/Group';
-import { Tooltip } from '../../Parts/Tooltip';
+import { Button } from '../../ui/Button';
+import { Group } from '../../ui/Group';
+import { Tooltip } from '../../ui/Tooltip';
 
 import type { Editor } from '@tiptap/react';
 import styles from './formatting.module.scss';
-import { ColorPicker } from '../../Parts/ColorPicker';
-import { BackgroundColor } from '../../Parts/BackgroundColor';
+import { ColorPicker } from '../../ui/ColorPicker';
+import { BackgroundColorPicker } from '../../ui/BackgroundColorPicker';
 
 type Props = {
   editor: Editor;
@@ -63,7 +63,7 @@ export const Formatting: React.VFC<Props> = ({ editor }) => {
           />
         }
       >
-        <BackgroundColor editor={editor} />
+        <BackgroundColorPicker editor={editor} />
       </Tooltip>
       <Tooltip
         trigger={

@@ -1,8 +1,8 @@
 import cx from 'classnames';
 
-import { Group } from '../../Parts/Group';
-import { Tooltip } from '../../Parts/Tooltip';
-import { Button } from '../../Parts/Button';
+import { Group } from '../../ui/Group';
+import { Tooltip } from '../../ui/Tooltip';
+import { Button } from '../../ui/Button';
 
 import styles from './heading.module.scss';
 import type { Editor } from '@tiptap/react';
