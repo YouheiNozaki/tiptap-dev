@@ -1,5 +1,5 @@
 import cx from 'classnames';
-import styles from './textbutton.module.scss';
+import styles from './button.module.scss';
 type Props = {
   text?: string;
   icon?: React.ReactChild;
