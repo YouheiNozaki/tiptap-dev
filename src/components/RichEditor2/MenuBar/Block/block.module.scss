@@ -1,13 +1,7 @@
-.list {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  li {
-    padding: 2px;
-  }
-}
-
 .li {
+  padding: 2px;
   list-style: none;
+  white-space: nowrap;
 }
 
 .button {

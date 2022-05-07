@@ -40,7 +40,8 @@ export const Block: React.VFC<Props> = ({ editor }) => {
                 disabled={!editor.can().addColumnBefore()}
                 className={styles.button}
               >
-                <span className="material-icons-outlined">table_chart</span>
+                {/* <span className="material-icons-outlined">table_chart</span> */}
+                <p>列を左に追加</p>
               </button>
             </li>
             <li className={styles.li}>
@@ -49,7 +50,7 @@ export const Block: React.VFC<Props> = ({ editor }) => {
                 disabled={!editor.can().addColumnAfter()}
                 className={styles.button}
               >
-                <span className="material-icons-outlined">table_chart</span>
+                <p>列を右に追加</p>
               </button>
             </li>
             <li className={styles.li}>
@@ -58,7 +59,7 @@ export const Block: React.VFC<Props> = ({ editor }) => {
                 disabled={!editor.can().deleteColumn()}
                 className={styles.button}
               >
-                <span className="material-icons-outlined">table_chart</span>
+                <p>列を削除</p>
               </button>
             </li>
             <li className={styles.li}>
@@ -67,7 +68,7 @@ export const Block: React.VFC<Props> = ({ editor }) => {
                 disabled={!editor.can().addRowBefore()}
                 className={styles.button}
               >
-                <span className="material-icons-outlined">table_chart</span>
+                <p>行を上に追加</p>
               </button>
             </li>
             <li className={styles.li}>
@@ -76,7 +77,7 @@ export const Block: React.VFC<Props> = ({ editor }) => {
                 disabled={!editor.can().addRowAfter()}
                 className={styles.button}
               >
-                <span className="material-icons-outlined">table_chart</span>
+                <p>行を下に追加</p>
               </button>
             </li>
             <li className={styles.li}>
@@ -85,16 +86,7 @@ export const Block: React.VFC<Props> = ({ editor }) => {
                 disabled={!editor.can().deleteRow()}
                 className={styles.button}
               >
-                <span className="material-icons-outlined">table_chart</span>
-              </button>
-            </li>
-            <li className={styles.li}>
-              <button
-                onClick={() => editor.chain().focus().mergeOrSplit().run()}
-                disabled={!editor.can().mergeOrSplit()}
-                className={styles.button}
-              >
-                <span className="material-icons-outlined">table_chart</span>
+                <p>行を削除</p>
               </button>
             </li>
             <li className={styles.li}>
@@ -103,7 +95,7 @@ export const Block: React.VFC<Props> = ({ editor }) => {
                 disabled={!editor.can().deleteTable()}
                 className={styles.button}
               >
-                <span className="material-icons-outlined">table_chart</span>
+                <p>テーブル削除</p>
               </button>
             </li>
           </ul>
