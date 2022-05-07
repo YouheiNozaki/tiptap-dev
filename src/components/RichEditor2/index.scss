@@ -39,6 +39,15 @@
     font-size: 16px;
   }
 
+  code {
+    background-color: #0d0d0d;
+    border-radius: 0.25em;
+    box-decoration-break: clone;
+    color: #fff;
+    font-size: 16px;
+    padding: 0.25em;
+  }
+
   pre {
     background: #0d0d0d;
     color: #fff;
