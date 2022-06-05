@@ -5,6 +5,7 @@ import { Block } from './Block';
 import { List } from './List';
 import { Sub } from './Sub';
 import styles from './menubar.module.css';
+import { External } from './External';
 
 type Props = {
   editor: Editor;
@@ -22,6 +23,7 @@ export const MenuBar: React.VFC<Props> = ({ editor }) => {
       <Block editor={editor} />
       <List editor={editor} />
       <Sub editor={editor} />
+      <External editor={editor} />
     </div>
   );
 };
