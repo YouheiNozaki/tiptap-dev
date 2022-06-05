@@ -33,7 +33,7 @@ export const External: React.VFC<Props> = ({ editor }) => {
       <Button
         icon={<span className="material-icons-outlined">link</span>}
         onClick={setLink}
-        isActive={editor.isActive('bulletList')}
+        isActive={editor.isActive('link')}
       />
     </Group>
   );
