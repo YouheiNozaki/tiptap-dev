@@ -40,7 +40,6 @@ export const Block: React.VFC<Props> = ({ editor }) => {
                 disabled={!editor.can().addColumnBefore()}
                 className={styles.button}
               >
-                {/* <span className="material-icons-outlined">table_chart</span> */}
                 <p>列を左に追加</p>
               </button>
             </li>

@@ -38,11 +38,6 @@ export const Formatting: React.VFC<Props> = ({ editor }) => {
         onClick={() => editor.chain().focus().toggleStrike().run()}
         isActive={editor.isActive('strike')}
       />
-      <Button
-        icon={<span className="material-icons-outlined">code_off</span>}
-        onClick={() => editor.chain().focus().toggleCode().run()}
-        isActive={editor.isActive('code')}
-      />
       <Tooltip
         trigger={
           <Button
@@ -148,6 +143,11 @@ export const Formatting: React.VFC<Props> = ({ editor }) => {
           </li>
         </ul>
       </Tooltip>
+      <Button
+        icon={<span className="material-icons-outlined">code_off</span>}
+        onClick={() => editor.chain().focus().toggleCode().run()}
+        isActive={editor.isActive('code')}
+      />
     </Group>
   );
 };
