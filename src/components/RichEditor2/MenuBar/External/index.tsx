@@ -2,6 +2,8 @@ import { useCallback } from 'react';
 import { Group } from '../../ui/Group';
 import { IconButton } from '../../ui/IconButton';
 import type { Editor } from '@tiptap/react';
+import { Tooltip } from '../../ui/Tooltip';
+import { Button } from '../../ui/Button';
 
 type Props = {
   editor: Editor;
@@ -30,11 +32,18 @@ export const External: React.VFC<Props> = ({ editor }) => {
 
   return (
     <Group>
-      <IconButton
-        icon={<span className="material-icons-outlined">link</span>}
-        onClick={setLink}
-        isActive={editor.isActive('link')}
-      />
+      <Tooltip
+        trigger={
+          <IconButton
+            icon={<span className="material-icons-outlined">link</span>}
+            isActive={editor.isActive('link')}
+          />
+        }
+      >
+        <Button onClick={setLink}>
+          <p>追加</p>
+        </Button>
+      </Tooltip>
     </Group>
   );
 };

@@ -1,0 +1,22 @@
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  background: none;
+  font-size: 12px;
+  font-weight: bold;
+  white-space: nowrap;
+  border-radius: 4px;
+  color: #fff;
+  background-color: #563bff;
+  padding: 4px 8px;
+
+  &:disabled {
+    color: #ccccd9;
+    background-color: #ccccd9;
+  }
+
+  &:hover {
+  }
+}
