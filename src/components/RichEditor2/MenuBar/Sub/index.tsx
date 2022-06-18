@@ -1,6 +1,6 @@
 import { Group } from '../../ui/Group';
 import type { Editor } from '@tiptap/react';
-import { Button } from '../../ui/Button';
+import { IconButton } from '../../ui/IconButton';
 
 type Props = {
   editor: Editor;
@@ -9,12 +9,12 @@ type Props = {
 export const Sub: React.VFC<Props> = ({ editor }) => {
   return (
     <Group>
-      <Button
+      <IconButton
         icon={<span className="material-icons-outlined">subscript</span>}
         onClick={() => editor.chain().focus().toggleSubscript().run()}
         isActive={editor.isActive('subscript')}
       />
-      <Button
+      <IconButton
         icon={<span className="material-icons-outlined">superscript</span>}
         onClick={() => editor.chain().focus().toggleSuperscript().run()}
         isActive={editor.isActive('superscript')}

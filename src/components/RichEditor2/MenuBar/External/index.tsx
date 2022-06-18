@@ -1,6 +1,6 @@
 import { useCallback } from 'react';
 import { Group } from '../../ui/Group';
-import { Button } from '../../ui/Button';
+import { IconButton } from '../../ui/IconButton';
 import type { Editor } from '@tiptap/react';
 
 type Props = {
@@ -30,7 +30,7 @@ export const External: React.VFC<Props> = ({ editor }) => {
 
   return (
     <Group>
-      <Button
+      <IconButton
         icon={<span className="material-icons-outlined">link</span>}
         onClick={setLink}
         isActive={editor.isActive('link')}

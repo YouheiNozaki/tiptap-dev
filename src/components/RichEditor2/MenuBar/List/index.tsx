@@ -1,6 +1,6 @@
 import { Group } from '../../ui/Group';
 import type { Editor } from '@tiptap/react';
-import { Button } from '../../ui/Button';
+import { IconButton } from '../../ui/IconButton';
 
 type Props = {
   editor: Editor;
@@ -9,14 +9,14 @@ type Props = {
 export const List: React.VFC<Props> = ({ editor }) => {
   return (
     <Group>
-      <Button
+      <IconButton
         icon={
           <span className="material-icons-outlined">format_list_bulleted</span>
         }
         onClick={() => editor.chain().focus().toggleBulletList().run()}
         isActive={editor.isActive('bulletList')}
       />
-      <Button
+      <IconButton
         icon={
           <span className="material-icons-outlined">format_list_bulleted</span>
         }

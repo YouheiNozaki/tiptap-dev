@@ -2,7 +2,7 @@ import cx from 'classnames';
 
 import { Group } from '../../ui/Group';
 import { Tooltip } from '../../ui/Tooltip';
-import { Button } from '../../ui/Button';
+import { IconButton } from '../../ui/IconButton';
 
 import styles from './heading.module.scss';
 import type { Editor } from '@tiptap/react';
@@ -23,7 +23,7 @@ export const Heading: React.VFC<Props> = ({ editor }) => {
       <div className={styles.wrapper}>
         <Tooltip
           trigger={
-            <Button
+            <IconButton
               text={
                 isHeading1
                   ? '見出し1'

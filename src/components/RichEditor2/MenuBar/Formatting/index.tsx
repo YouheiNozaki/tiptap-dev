@@ -1,6 +1,6 @@
 import cx from 'classnames';
 
-import { Button } from '../../ui/Button';
+import { IconButton } from '../../ui/IconButton';
 import { Group } from '../../ui/Group';
 import { Tooltip } from '../../ui/Tooltip';
 
@@ -21,17 +21,17 @@ export const Formatting: React.VFC<Props> = ({ editor }) => {
 
   return (
     <Group>
-      <Button
+      <IconButton
         icon={<span className="material-icons-outlined">format_bold</span>}
         onClick={() => editor.chain().focus().toggleBold().run()}
         isActive={editor.isActive('bold')}
       />
-      <Button
+      <IconButton
         icon={<span className="material-icons-outlined">format_italic</span>}
         onClick={() => editor.chain().focus().toggleItalic().run()}
         isActive={editor.isActive('italic')}
       />
-      <Button
+      <IconButton
         icon={
           <span className="material-icons-outlined">format_strikethrough</span>
         }
@@ -40,7 +40,7 @@ export const Formatting: React.VFC<Props> = ({ editor }) => {
       />
       <Tooltip
         trigger={
-          <Button
+          <IconButton
             icon={
               <span className="material-icons-outlined">format_color_text</span>
             }
@@ -51,7 +51,7 @@ export const Formatting: React.VFC<Props> = ({ editor }) => {
       </Tooltip>
       <Tooltip
         trigger={
-          <Button
+          <IconButton
             icon={
               <span className="material-icons-outlined">format_color_fill</span>
             }
@@ -63,7 +63,7 @@ export const Formatting: React.VFC<Props> = ({ editor }) => {
       <Tooltip
         trigger={
           textAlighCenter ? (
-            <Button
+            <IconButton
               icon={
                 <span className="material-icons-outlined">
                   align_horizontal_center
@@ -72,7 +72,7 @@ export const Formatting: React.VFC<Props> = ({ editor }) => {
               isActive={true}
             />
           ) : textAlighRight ? (
-            <Button
+            <IconButton
               icon={
                 <span className="material-icons-outlined">
                   align_horizontal_right
@@ -81,7 +81,7 @@ export const Formatting: React.VFC<Props> = ({ editor }) => {
               isActive={true}
             />
           ) : textAlighJustify ? (
-            <Button
+            <IconButton
               icon={
                 <span className="material-icons-outlined">
                   format_align_justify
@@ -90,7 +90,7 @@ export const Formatting: React.VFC<Props> = ({ editor }) => {
               isActive={true}
             />
           ) : (
-            <Button
+            <IconButton
               icon={
                 <span className="material-icons-outlined">
                   align_horizontal_left
@@ -143,7 +143,7 @@ export const Formatting: React.VFC<Props> = ({ editor }) => {
           </li>
         </ul>
       </Tooltip>
-      <Button
+      <IconButton
         icon={<span className="material-icons-outlined">code_off</span>}
         onClick={() => editor.chain().focus().toggleCode().run()}
         isActive={editor.isActive('code')}

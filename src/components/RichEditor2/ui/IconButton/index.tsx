@@ -7,7 +7,12 @@ type Props = {
   onClick?: React.MouseEventHandler<HTMLButtonElement>;
 };
 
-export const Button: React.VFC<Props> = ({ text, icon, isActive, onClick }) => {
+export const IconButton: React.VFC<Props> = ({
+  text,
+  icon,
+  isActive,
+  onClick,
+}) => {
   return (
     <button
       className={cx(styles.button, {

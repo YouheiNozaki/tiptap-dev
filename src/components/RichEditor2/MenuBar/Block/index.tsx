@@ -1,6 +1,6 @@
 import { Group } from '../../ui/Group';
 import type { Editor } from '@tiptap/react';
-import { Button } from '../../ui/Button';
+import { IconButton } from '../../ui/IconButton';
 import { Tooltip } from '../../ui/Tooltip';
 
 import styles from './block.module.scss';
@@ -12,12 +12,12 @@ type Props = {
 export const Block: React.VFC<Props> = ({ editor }) => {
   return (
     <Group>
-      <Button
+      <IconButton
         icon={<span className="material-icons">format_quote</span>}
         onClick={() => editor.chain().focus().toggleBlockquote().run()}
         isActive={editor.isActive('blockquote')}
       />
-      <Button
+      <IconButton
         icon={<span className="material-icons-outlined">code</span>}
         onClick={() => editor.chain().focus().toggleCodeBlock().run()}
         isActive={editor.isActive('codeBlock')}
@@ -25,7 +25,7 @@ export const Block: React.VFC<Props> = ({ editor }) => {
       {editor.isActive('table') ? (
         <Tooltip
           trigger={
-            <Button
+            <IconButton
               icon={
                 <span className="material-icons-outlined">table_chart</span>
               }
@@ -100,7 +100,7 @@ export const Block: React.VFC<Props> = ({ editor }) => {
           </ul>
         </Tooltip>
       ) : (
-        <Button
+        <IconButton
           icon={<span className="material-icons-outlined">table_chart</span>}
           onClick={() =>
             editor
