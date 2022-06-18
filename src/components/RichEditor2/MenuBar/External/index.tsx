@@ -1,4 +1,4 @@
-import { useCallback, useEffect } from 'react';
+import { useCallback } from 'react';
 import { Group } from '../../ui/Group';
 import { Button } from '../../ui/Button';
 import type { Editor } from '@tiptap/react';
@@ -27,13 +27,6 @@ export const External: React.VFC<Props> = ({ editor }) => {
     // update link
     editor.chain().focus().extendMarkRange('link').setLink({ href: url }).run();
   }, [editor]);
-
-  useEffect(() => {
-    if (editor.isActive('link')) {
-      setLink();
-    }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [editor, editor.isActive('link'), setLink]);
 
   return (
     <Group>
