@@ -4,6 +4,7 @@ import { IconButton } from '../../ui/IconButton';
 import type { Editor } from '@tiptap/react';
 import { Tooltip } from '../../ui/Tooltip';
 import { Button } from '../../ui/Button';
+import styles from './external.module.scss';
 
 type Props = {
   editor: Editor;
@@ -40,9 +41,11 @@ export const External: React.VFC<Props> = ({ editor }) => {
           />
         }
       >
-        <Button onClick={setLink}>
-          <p>追加</p>
-        </Button>
+        <div className={styles.link}>
+          <Button onClick={setLink}>
+            <span>追加</span>
+          </Button>
+        </div>
       </Tooltip>
     </Group>
   );

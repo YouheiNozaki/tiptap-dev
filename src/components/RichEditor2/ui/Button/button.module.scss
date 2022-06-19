@@ -10,13 +10,10 @@
   border-radius: 4px;
   color: #fff;
   background-color: #563bff;
-  padding: 4px 8px;
+  padding: 4px 12px;
 
   &:disabled {
     color: #ccccd9;
     background-color: #ccccd9;
-  }
-
-  &:hover {
   }
 }
