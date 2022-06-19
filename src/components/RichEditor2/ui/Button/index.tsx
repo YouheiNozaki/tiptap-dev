@@ -2,10 +2,7 @@ import clsx from 'clsx';
 import React from 'react';
 import styles from './button.module.scss';
 
-export type Props = React.DetailedHTMLProps<
-  React.ButtonHTMLAttributes<HTMLButtonElement>,
-  HTMLButtonElement
->;
+type Props = React.ComponentProps<'button'>;
 
 export const Button = React.forwardRef<HTMLButtonElement, Props>(
   ({ className, ...props }, ref) => (
