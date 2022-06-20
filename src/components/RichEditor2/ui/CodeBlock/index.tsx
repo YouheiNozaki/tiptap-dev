@@ -1,5 +1,4 @@
 import { NodeViewWrapper, NodeViewContent } from '@tiptap/react';
-import './codeblock.scss';
 
 type Props = {
   node: any;

@@ -20,7 +20,7 @@ import Link from '@tiptap/extension-link';
 import { Container } from './Container';
 import { MenuBar } from './MenuBar';
 import { CodeBlock } from './ui/CodeBlock';
-import './index.scss';
+// @ts-ignore
 import styles from './index.module.scss';
 import { Preview } from './Preview';
 

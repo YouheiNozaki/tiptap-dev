@@ -1,5 +1,4 @@
-import './App.css';
-import { RichEditor2 } from './components/RichEditor2';
+import { RichEditor2 } from '../components/RichEditor2';
 
 function App() {
   return (
