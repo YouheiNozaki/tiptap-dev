@@ -11,21 +11,22 @@ type Props = {
 };
 
 export const Link: React.VFC<Props> = ({ editor }) => {
-  const { url, setInputValue, setLink } = useLink(editor);
+  const { url, setUrl, onSubmitUrl } = useLink(editor);
   return (
     <Tooltip
       trigger={
         <IconButton
           icon={<span className="material-icons-outlined">link</span>}
           isActive={editor.isActive('link')}
+          onClick={() => setUrl(editor.getAttributes('link').href || '')}
         />
       }
     >
       <div className={styles.link}>
         <div className={styles.linkInput}>
-          <Input value={url} onChange={setInputValue} />
+          <Input value={url} onChange={(e) => setUrl(e.target.value)} />
         </div>
-        <Button onClick={setLink}>
+        <Button onClick={onSubmitUrl}>
           <span>追加</span>
         </Button>
       </div>

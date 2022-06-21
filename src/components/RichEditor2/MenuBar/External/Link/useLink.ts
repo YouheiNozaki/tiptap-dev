@@ -2,18 +2,9 @@ import { Editor } from '@tiptap/react';
 import { useState, useCallback } from 'react';
 
 export const useLink = (editor: Editor) => {
-  const [url, setUrl] = useState<string>(
-    editor.getAttributes('link').href || '',
-  );
+  const [url, setUrl] = useState<string>('');
 
-  const setInputValue = useCallback(
-    (e: React.ChangeEvent<HTMLInputElement>) => {
-      setUrl(e.target.value);
-    },
-    [],
-  );
-
-  const setLink = useCallback(() => {
+  const onSubmitUrl = useCallback(() => {
     if (url === '') {
       editor.chain().focus().extendMarkRange('link').unsetLink().run();
       return;
@@ -22,5 +13,5 @@ export const useLink = (editor: Editor) => {
     editor.chain().focus().extendMarkRange('link').setLink({ href: url }).run();
   }, [editor, url]);
 
-  return { url, setInputValue, setLink };
+  return { url, setUrl, onSubmitUrl };
 };
